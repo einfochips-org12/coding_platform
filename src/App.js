@@ -1,75 +1,140 @@
-  // // App.js
-  // import React, { useState } from 'react';
-  // import Sidebar from './components/sidebar/Sidebar';
-  // import TaskPage from './pages/TaskPages/taskpage';
-  // import LoginForm from './pages/Login/Login';
-  // import SignupForm from './pages/Signup/signup';
 
-  // const App = () => {
-  //   const [isExpanded, setIsExpanded] = useState(true);
+// import React, { useState, useEffect } from "react";
+// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-  //   const toggleSidebar = () => setIsExpanded(prev => !prev);
+// import Sidebar from "./components/sidebar/Sidebar";
+// import TaskPage from "./pages/TaskPages/taskpage";
+// import LoginForm from "./pages/Login/Login";
+// import SignupForm from "./pages/Signup/signup";
+// import Dashboard from "./pages/Dashboard/dashboard";
 
-  //   return (
-  //     <div className="flex h-screen overflow-hidden">
-  //       <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} />
-  //       <TaskPage isSidebarExpanded={isExpanded} />
-  //       {/* <SignupForm /> */}
+// import CategoryPage from "./pages/TaskPages/Category";
+// import Submissions from "./pages/submission/submission";
+// import EditorPage from "./pages/Editor/editor";
+// const App = () => {
+//   const [isExpanded, setIsExpanded] = useState(true);
 
-  //     </div>
-  //   );
-  // };
+//   const toggleSidebar = () => setIsExpanded((prev) => !prev);
 
-  // export default App;
+//   return (
+//     <BrowserRouter>
+//       <div className="flex h-screen overflow-hidden">
+//         {/* Sidebar only on authenticated routes */}
 
-  // App.js
-  import React, { useState,useEffect } from 'react';
-  import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+//         <Routes>
+//           {/* Public */}
+//           <Route path="/login" element={<LoginForm />} />
+//           <Route path="/signup" element={<SignupForm />} />
 
-  import Sidebar from './components/sidebar/Sidebar';
-  import TaskPage from './pages/TaskPages/taskpage';
-  import LoginForm from './pages/Login/Login';
-  import SignupForm from './pages/Signup/signup';
-  import Dashboard from './pages/Dashboard/dashboard';
+//           {/* Protected area (with sidebar) */}
+//           <Route
+//             path="/*"
+//             element={
+//               <>
+//                 <Sidebar
+//                   isExpanded={isExpanded}
+//                   toggleSidebar={toggleSidebar}
+//                 />
+//                 <div className="flex-1">
+//                   <Routes>
+//                     <Route path="/dashboard" element={<Dashboard />} />
+//                     <Route path="/category" element={<CategoryPage />} />
+//                     <Route
+//                       path="/category/:categoryId/tasks"
+//                       element={<TaskPage />}
+//                     />
 
-  import CategoryPage from './pages/TaskPages/Category';
-  import Submissions from './pages/submission/submission';
-  const App = () => {
-    const [isExpanded, setIsExpanded] = useState(true);
+//                     <Route
+//                       path="/category/:categoryId/tasks/:taskId"
+//                       element={<EditorPage />}
+//                     />
 
-    const toggleSidebar = () => setIsExpanded(prev => !prev);
+//                     <Route path="/submissions" element={<Submissions />} />
 
-    return (
-      <BrowserRouter>
-        <div className="flex h-screen overflow-hidden">
-          {/* Sidebar only on authenticated routes */}
-          <Routes>
-            <Route
-              path="/*"
-              element={
-                <>
-                  <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} />
-                  <div className="flex-1">
-                    <Routes>
-                      {/* <Route path="/tasks" element={<TaskPage isSidebarExpanded={isExpanded} />} /> */}
-                      <Route path="/category" element={<CategoryPage />} />
+//                     <Route
+//                       path="*"
+//                       element={<Navigate to="/dashboard" replace />}
+//                     />
+//                   </Routes>
+//                 </div>
+//               </>
+//             }
+//           />
+//         </Routes>
+//       </div>
+//     </BrowserRouter>
+//   );
+// };
 
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      
-                      <Route path="/submissions" element={<Submissions />} />
-                      <Route path="/tasks" element={<TaskPage />} />
-                      
-                    </Routes>
-                  </div>
-                </>
-              }
-            />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/signup" element={<SignupForm />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    );
-  };
+// export default App;
 
-  export default App;
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+import Sidebar from "./components/Admin/Sidebar";
+import TaskPage from "./pages/TaskPages/taskpage";
+import LoginForm from "./pages/Login/Login";
+import SignupForm from "./pages/Signup/signup";
+import Dashboard from "./pages/Dashboard/dashboard";
+import CategoryPage from "./pages/TaskPages/Category";
+import Submissions from "./pages/submission/submission";
+import EditorPage from "./pages/Editor/editor";
+
+import AdminDashboard from "./pages/admin/Dashboard/Admindashboard";
+import UserAcceptancePanel from "./pages/admin/UserAcceptancePanel/UserAcceptancePanel";
+import AdminTaskPage from "./pages/admin/TaskPage/TaskPage";
+const App = () => {
+  const [isExpanded, setIsExpanded] = useState(true);
+  const toggleSidebar = () => setIsExpanded((prev) => !prev);
+  const [isAdmin, setIsAdmin] = useState(false); 
+  return (
+    <BrowserRouter>
+      <div className="flex h-screen overflow-hidden">
+        <Routes>
+          {/* Public */}
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm />} />
+
+         
+          <Route
+            path="/admin/*"
+            element={
+              <>
+                <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} />
+                <div className="flex-1">
+                  <Routes>
+                    <Route path="/AdminDashboard" element={<AdminDashboard />} />
+                    <Route path="/UserAcceptancePanel" element={<UserAcceptancePanel />} />
+                    <Route path="/tasks" element={<AdminTaskPage />} />
+                  </Routes>
+                </div>
+              </>
+            }
+          />
+
+          {/* User routes */}
+          {/* <Route
+            path="/*"
+            element={
+              <>
+                <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} role="user"/>
+                <div className="flex-1">
+                  <Routes>
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="category" element={<CategoryPage />} />
+                    <Route path="category/:categoryId/tasks" element={<TaskPage />} />
+                    <Route path="category/:categoryId/tasks/:taskId" element={<EditorPage />} />
+                    <Route path="submissions" element={<Submissions />} />
+                    <Route path="*" element={<Navigate to="/dashboard" replace />} />
+                  </Routes>
+                </div>
+              </>
+            }
+          /> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
+
+export default App;

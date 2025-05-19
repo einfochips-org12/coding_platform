@@ -31,7 +31,7 @@ const LoginForm = () => {
     const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.gidOrEmail);
 
     if (!isGid && !isEmail) {
-      alert("Please enter a valid 5-digit GID or email.");
+      alert("Please enter a valid 6-digit GID or email.");
       return;
     }
 
@@ -50,9 +50,7 @@ const LoginForm = () => {
       <div className="absolute top-0 left-2 w-36 h-20 flex justify-center items-center">
          <img src={logo} alt="logo" />
       </div>
-      <div className="absolute top-10">
-        <span className="text-4xl font-semibold text-gray-900">New Way to Learn</span>
-      </div>
+    
       <div className="absolute left-36 h-fit flex justify-center items-center opacity-75">
         <img className="h-96" src={img1} alt="404" />
       </div>

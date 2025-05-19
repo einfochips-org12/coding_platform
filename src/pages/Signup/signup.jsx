@@ -27,11 +27,42 @@ const SignupForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
+     e.preventDefault();
+
+  const { gid, email, password, confirmPassword } = formData;
+
+  // Basic validations
+  if (!gid || !email || !password || !confirmPassword) {
+    alert("All fields are required");
+    return;
+  }
+
+
+  const isGid = /^[0-9]{6}$/.test(formData.gid);
+  if (!isGid) {
+    alert("GID must be 6 digits long");
+    return;
+  }
+
+  // Email format validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
+  // Password length
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long");
+    return;
+  }
+
+  // Password match
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+
 
     dispatch(setSignupData({
       gid: formData.gid,
@@ -39,7 +70,7 @@ const SignupForm = () => {
       password: formData.password,
     }));
 
-    // console.log("Form submitted and data dispatched to Redux:", formData);
+    console.log("Form submitted and data dispatched to Redux:", formData);
   };
 
   return (
@@ -48,9 +79,7 @@ const SignupForm = () => {
       <div className="absolute top-0 left-2 w-36 h-20 flex justify-center items-center">
         <img src={logo} alt="" />
       </div>
-      <div className="absolute top-10">
-        <span className="text-4xl font-semibold text-gray-900">New Way to Learn</span>
-      </div>
+      
       <div className="absolute left-36 h-fit flex justify-center items-center opacity-75">
         <img className="h-96" src={img1} alt="404" />
       </div>
