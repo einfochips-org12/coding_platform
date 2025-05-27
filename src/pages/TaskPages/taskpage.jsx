@@ -44,7 +44,7 @@
     };
 
     const handleTaskClick = (taskId) => {
-        navigate(`/category/${categoryId}/tasks/${taskId}`);
+        navigate(`/user/category/${categoryId}/tasks/${taskId}`);
     };
 
     const handleCloseEditor = () => {

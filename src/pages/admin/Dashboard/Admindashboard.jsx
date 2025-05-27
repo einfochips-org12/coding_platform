@@ -584,7 +584,7 @@ export default function Dashboard() {
           </div>
 
           {/* Charts */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 overflow-auto lg:overflow-hidden gap-6">
             <div className="bg-white p-4 rounded-lg shadow">
               <h2 className="text-lg font-medium mb-4">Performance Overview</h2>
               <p className="text-sm text-gray-500 mb-4">Tasks Completed Per Day</p>

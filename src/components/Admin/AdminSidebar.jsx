@@ -318,14 +318,15 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import logo from "../../Assests/eInfochips-Logo.png";
 import { img } from 'framer-motion/client';
+import ProfileMenu from './profile/profileMenu';
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(true);
   const location = useLocation();
 
   const menuItems = [
     { id: 'dashboard', name: 'Dashboard', icon: Home, path: '/admin/AdminDashboard' },
-    { id: 'tasks', name: 'Tasks', icon: CheckSquare, path: '/admin/tasks' },
-    { id: 'users', name: 'Users', icon: Users, path: '/admin/UserAcceptancePanel' },
+    { id: 'tasks', name: 'Tasks', icon: CheckSquare, path: '/admin/category' },
+    { id: 'users', name: 'Users', icon: Users, path: '/admin/users' },
     { id: 'report', name: 'Report', icon: FileText, path: '/report' },
     { id: 'exam', name: 'Exam', icon: BookOpen, path: '/exam' },
     { id: 'addMentor', name: 'Add Mentor', icon: UserPlus, path: '/add-mentor' },
@@ -370,7 +371,7 @@ export default function Sidebar() {
         </div>
 
         {/* User Profile */}
-        <div className={`p-4 border-t flex items-center ${expanded ? 'justify-between' : 'justify-center'}`}>
+        {/* <div className={`p-4 border-t flex items-center ${expanded ? 'justify-between' : 'justify-center'}`}>
           <div className={`flex items-center ${!expanded ? 'justify-center w-full' : ''}`}>
             <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
               <span className="text-xs font-medium">HS</span>
@@ -383,13 +384,10 @@ export default function Sidebar() {
             )}
           </div>
           {expanded && <ChevronDown size={16} />}
-        </div>
-      </div>
+        </div> */}
 
-      {/* Main Content - you can render routed pages here */}
-      {/* <div className="flex-1 p-10">
-        
-      </div> */}
+        <ProfileMenu  expanded={expanded} />
+      </div>
     </div>
   );
 }

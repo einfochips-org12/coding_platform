@@ -1,410 +1,3 @@
-
-
-
-// // import { useState } from "react";
-// // import { useNavigate } from "react-router-dom";
-// // import { Lock, Unlock } from "lucide-react";
-// // import { motion, AnimatePresence } from "framer-motion";
-// // import { Link } from "react-router-dom";
-
-// // export default function CategoryPage() {
-// //   const [categories] = useState([
-// //     {
-// //       name: "Dennis Ritchie",
-// //       totalSub: 8,
-// //       totalQuestion: 145,
-// //       isLocked: false,
-// //     },
-// //     {
-// //       name: "Yashwant Kanetkar",
-// //       totalSub: 9,
-// //       totalQuestion: 145,
-// //       isLocked: false,
-// //     },
-// //     { name: "Takeaway", totalSub: 9, totalQuestion: 145, isLocked: true },
-// //     { name: "Debugging", totalSub: 0, totalQuestion: 145, isLocked: true },
-// //     { name: "Error Solving", totalSub: 0, totalQuestion: 145, isLocked: true },
-// //   ]);
-
-// //   const [openCategory, setOpenCategory] = useState(null);
-// //   const navigate = useNavigate();
-
-// //   const toggleCategory = (index) => {
-// //     if (categories[index].isLocked) return;
-// //     setOpenCategory(openCategory === index ? null : index);
-// //   };
-
-// //   const getSubCategories = (count) => {
-// //     return Array(count)
-// //       .fill()
-// //       .map((_, i) => ({
-// //         name: `Subcategory ${i + 1}`,
-// //         questionCount: Math.floor(Math.random() * 30) + 10,
-// //       }));
-// //   };
-
-// //   const handleSubcategoryClick = (subcategory) => {
-// //     navigate("/tasks");
-// //   };
-
-// //   return (
-// //     <div className="h-full w-full p-4 flex justify-center items-center">
-// //       <div className="max-w-3xl h-full w-full">
-// //         <div className="bg-white rounded-xl shadow-sm space-y-2 w-full h-full p-4">
-// //           {categories.map((category, index) => (
-// //             <div key={index} className="border-b last:border-b-0">
-// //               <div
-// //                 className="px-6 py-4 flex items-center justify-between mt-5 cursor-pointer border border-gray-400 rounded-lg shadow-md hover:bg-gray-50"
-// //                 onClick={() => toggleCategory(index)}
-// //               >
-// //                 <div className="flex items-center space-x-3">
-// //                   <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center text-white font-medium">
-// //                     {index + 1}
-// //                   </div>
-// //                   <Link to="/tasks">
-// //                   <span className="font-medium text-gray-800">
-// //                     {category.name}
-// //                   </span>
-// //                   </Link>
-// //                 </div>
-// //                 <div className="flex items-center">
-// //                   <div className="flex flex-col items-end mr-4">
-// //                     <div className="flex justify-between w-full">
-// //                       <span className="text-xs text-gray-400 mr-16">
-// //                         Total Sub
-// //                       </span>
-// //                       <span className="text-xs text-gray-400">
-// //                         Total Question
-// //                       </span>
-// //                     </div>
-// //                     <div className="flex justify-between w-full">
-// //                       <span className="font-semibold text-gray-700 mr-16">
-// //                         {category.totalSub}
-// //                       </span>
-// //                       <span className="font-semibold text-gray-700">
-// //                         {category.totalQuestion}
-// //                       </span>
-// //                     </div>
-// //                   </div>
-// //                   <div className="w-6 h-6 flex items-center justify-center">
-// //                     {category.isLocked ? (
-// //                       <Lock size={20} className="text-gray-600" />
-// //                     ) : (
-// //                       <Unlock size={20} className="text-green-500" />
-// //                     )}
-// //                   </div>
-// //                 </div>
-// //               </div>
-
-// //               {/* Animate subcategories */}
-// //               <AnimatePresence>
-// //                 {openCategory === index &&
-// //                   !category.isLocked &&
-// //                   category.totalSub > 0 && (
-// //                     <motion.div
-// //                       initial={{ opacity: 0, height: 0 }}
-// //                       animate={{ opacity: 1, height: "auto" }}
-// //                       exit={{ opacity: 0, height: 0 }}
-// //                       transition={{ duration: 0.3 }}
-// //                       className="overflow-hidden bg-gray-50 px-10 py-3"
-// //                     >
-// //                       <div className="space-y-2">
-// //                         {getSubCategories(category.totalSub).map(
-// //                           (sub, subIndex) => (
-// //                             <div
-// //                               key={subIndex}
-// //                               onClick={() => handleSubcategoryClick(sub)}
-// //                               className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 cursor-pointer"
-// //                             >
-// //                               <span className="text-sm text-gray-700">
-// //                                 {sub.name}
-// //                               </span>
-// //                               <span className="text-xs text-gray-500">
-// //                                 {sub.questionCount} questions
-// //                               </span>
-// //                             </div>
-// //                           )
-// //                         )}
-// //                       </div>
-// //                     </motion.div>
-// //                   )}
-// //               </AnimatePresence>
-// //             </div>
-// //           ))}
-// //         </div>
-// //       </div>
-// //     </div>
-// //   );
-// // }
-
-// // import { useState } from "react";
-// // import { useNavigate } from "react-router-dom";
-// // import { Lock, Unlock } from "lucide-react";
-// // import { motion, AnimatePresence } from "framer-motion";
-
-// // export default function CategoryPage() {
-// //   const [categories] = useState([
-// //     {
-// //       name: "Dennis Ritchie",
-// //       totalSub: 8,
-// //       totalQuestion: 145,
-// //       isLocked: false,
-// //     },
-// //     {
-// //       name: "Yashwant Kanetkar",
-// //       totalSub: 9,
-// //       totalQuestion: 145,
-// //       isLocked: false,
-// //     },
-// //     { name: "Takeaway", totalSub: 9, totalQuestion: 145, isLocked: true },
-// //     { name: "Debugging", totalSub: 0, totalQuestion: 145, isLocked: true },
-// //     { name: "Error Solving", totalSub: 0, totalQuestion: 145, isLocked: true },
-// //   ]);
-
-// //   const [openCategory, setOpenCategory] = useState(null);
-// //   const navigate = useNavigate();
-
-// //   const toggleCategory = (index) => {
-// //     if (categories[index].isLocked) return;
-// //     setOpenCategory(openCategory === index ? null : index);
-// //   };
-
-// //   const getSubCategories = (count) => {
-// //     return Array(count)
-// //       .fill()
-// //       .map((_, i) => ({
-// //         name: `Subcategory ${i + 1}`,
-// //         questionCount: Math.floor(Math.random() * 30) + 10,
-// //       }));
-// //   };
-
-// //   const handleSubcategoryClick = (categoryID  ) => {
-// //     navigate("/category/task");
-// //   };
-
-// //   return (
-// //     <div className="h-full w-full p-4 flex justify-center items-center">
-// //       <div className="max-w-3xl h-full w-full">
-// //         <div className="bg-white rounded-xl shadow-sm space-y-2 w-full h-full p-4">
-// //           {categories.map((category, index) => (
-// //             <div key={index} className="border-b last:border-b-0">
-// //               <div
-// //                 className="px-6 py-4 flex items-center justify-between mt-5 cursor-pointer border border-gray-400 rounded-lg shadow-md hover:bg-gray-50"
-// //                 onClick={() => toggleCategory(index)}
-// //               >
-// //                 <div className="flex items-center space-x-3">
-// //                   <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center text-white font-medium">
-// //                     {index + 1}
-// //                   </div>
-// //                   <span className="font-medium text-gray-800">
-// //                     {category.name}
-// //                   </span>
-// //                 </div>
-// //                 <div className="flex items-center">
-// //                   <div className="flex flex-col items-end mr-4">
-// //                     <div className="flex justify-between w-full">
-// //                       <span className="text-xs text-gray-400 mr-16">
-// //                         Total Sub
-// //                       </span>
-// //                       <span className="text-xs text-gray-400">
-// //                         Total Question
-// //                       </span>
-// //                     </div>
-// //                     <div className="flex justify-between w-full">
-// //                       <span className="font-semibold text-gray-700 mr-16">
-// //                         {category.totalSub}
-// //                       </span>
-// //                       <span className="font-semibold text-gray-700">
-// //                         {category.totalQuestion}
-// //                       </span>
-// //                     </div>
-// //                   </div>
-// //                   <div className="w-6 h-6 flex items-center justify-center">
-// //                     {category.isLocked ? (
-// //                       <Lock size={20} className="text-gray-600" />
-// //                     ) : (
-// //                       <Unlock size={20} className="text-green-500" />
-// //                     )}
-// //                   </div>
-// //                 </div>
-// //               </div>
-
-// //               {/* Animate subcategories */}
-// //               <AnimatePresence>
-// //                 {openCategory === index &&
-// //                   !category.isLocked &&
-// //                   category.totalSub > 0 && (
-// //                     <motion.div
-// //                       initial={{ opacity: 0, height: 0 }}
-// //                       animate={{ opacity: 1, height: "auto" }}
-// //                       exit={{ opacity: 0, height: 0 }}
-// //                       transition={{ duration: 0.3 }}
-// //                       className="overflow-hidden bg-gray-50 px-10 py-3"
-// //                     >
-// //                       <div className="space-y-2">
-// //                         {getSubCategories(category.totalSub).map(
-// //                           (sub, subIndex) => (
-// //                             <div
-// //                               key={subIndex}
-// //                               onClick={() => handleSubcategoryClick(sub)}
-// //                               className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 cursor-pointer"
-// //                             >
-// //                               <span className="text-sm text-gray-700">
-// //                                 {sub.name}
-// //                               </span>
-// //                               <span className="text-xs text-gray-500">
-// //                                 {sub.questionCount} questions
-// //                               </span>
-// //                             </div>
-// //                           )
-// //                         )}
-// //                       </div>
-// //                     </motion.div>
-// //                   )}
-// //               </AnimatePresence>
-// //             </div>
-// //           ))}
-// //         </div>
-// //       </div>
-// //     </div>
-// //   );
-// // }
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { Lock, Unlock } from "lucide-react";
-// import { motion, AnimatePresence } from "framer-motion";
-
-// const categoriesData = [
-//   {
-//     id: "dennis-ritchie",
-//     name: "Dennis Ritchie",
-//     totalSub: 8,
-//     totalQuestion: 145,
-//     isLocked: false,
-//   },
-//   {
-//     id: "yashwant-kanetkar",
-//     name: "Yashwant Kanetkar",
-//     totalSub: 9,
-//     totalQuestion: 145,
-//     isLocked: false,
-//   },
-//   {
-//     id: "takeaway",
-//     name: "Takeaway",
-//     totalSub: 9,
-//     totalQuestion: 145,
-//     isLocked: true,
-//   },
-//   {
-//     id: "debugging",
-//     name: "Debugging",
-//     totalSub: 0,
-//     totalQuestion: 145,
-//     isLocked: true,
-//   },
-//   {
-//     id: "error-solving",
-//     name: "Error Solving",
-//     totalSub: 0,
-//     totalQuestion: 145,
-//     isLocked: true,
-//   },
-// ];
-
-// export default function CategoryPage() {
-//   const [categories] = useState(categoriesData);
-//   const [openCategory, setOpenCategory] = useState(null);
-//   const navigate = useNavigate();
-
-//   const toggleCategory = (index) => {
-//     if (categories[index].isLocked) return;
-//     setOpenCategory(openCategory === index ? null : index);
-//   };
-
-//   const getSubCategories = (count) => {
-//     return Array(count)
-//       .fill()
-//       .map((_, i) => ({
-//         name: `Subcategory ${i + 1}`,
-//         questionCount: Math.floor(Math.random() * 30) + 10,
-//       }));
-//   };
-
-//   const handleSubcategoryClick = (categoryId) => {
-    
-//     navigate(`/user/category/${categoryId}/tasks`);
-//   };
-
-//   return (
-//     <div className="h-full w-full p-4 flex justify-center items-center">
-//       <div className="max-w-3xl h-full w-full">
-//         <div className="bg-white rounded-xl shadow-sm space-y-2 w-full h-full p-4">
-//           {categories.map((category, index) => (
-//             <div key={category.id} className="border-b last:border-b-0">
-//               <div
-//                 className="px-6 py-4 flex items-center justify-between mt-5 cursor-pointer border border-gray-400 rounded-lg shadow-md hover:bg-gray-50"
-//                 onClick={() => toggleCategory(index)}
-//               >
-//                 <div className="flex items-center space-x-3">
-//                   <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center text-white font-medium">
-//                     {index + 1}
-//                   </div>
-//                   <span className="font-medium text-gray-800">{category.name}</span>
-//                 </div>
-//                 <div className="flex items-center">
-//                   <div className="flex flex-col items-end mr-4">
-//                     <div className="flex justify-between w-full">
-//                       <span className="text-xs text-gray-400 mr-16">Total Sub</span>
-//                       <span className="text-xs text-gray-400">Total Question</span>
-//                     </div>
-//                     <div className="flex justify-between w-full">
-//                       <span className="font-semibold text-gray-700 mr-16">{category.totalSub}</span>
-//                       <span className="font-semibold text-gray-700">{category.totalQuestion}</span>
-//                     </div>
-//                   </div>
-//                   <div className="w-6 h-6 flex items-center justify-center">
-//                     {category.isLocked ? (
-//                       <Lock size={20} className="text-gray-600" />
-//                     ) : (
-//                       <Unlock size={20} className="text-green-500" />
-//                     )}
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* Animate subcategories */}
-//               <AnimatePresence>
-//                 {openCategory === index && !category.isLocked && category.totalSub > 0 && (
-//                   <motion.div
-//                     initial={{ opacity: 0, height: 0 }}
-//                     animate={{ opacity: 1, height: "auto" }}
-//                     exit={{ opacity: 0, height: 0 }}
-//                     transition={{ duration: 0.3 }}
-//                     className="overflow-hidden bg-gray-50 px-10 py-3"
-//                   >
-//                     <div className="space-y-2">
-//                       {getSubCategories(category.totalSub).map((sub, subIndex) => (
-//                         <div
-//                           key={subIndex}
-//                           onClick={() => handleSubcategoryClick(category.id)}
-//                           className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 cursor-pointer"
-//                         >
-//                           <span className="text-sm text-gray-700">{sub.name}</span>
-//                           <span className="text-xs text-gray-500">{sub.questionCount} questions</span>
-//                         </div>
-//                       ))}
-//                     </div>
-//                   </motion.div>
-//                 )}
-//               </AnimatePresence>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 // import { useState } from "react";
 // import { Trash2, Lock, Unlock, Edit, Plus, Check, X } from "lucide-react";
 
@@ -701,16 +294,11 @@
 import { useState } from "react";
 import { Trash2, Lock, Unlock, Edit, Plus, Check, X, ChevronDown, ChevronRight, Menu } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-
 export default function TaskCategoriesPage() {
   const navigate = useNavigate();
-  const handleSubcategoryClick = (categoryID) => {
-     navigate(`/user/category/${categoryID}/tasks`);
-   };
   const [categories, setCategories] = useState([
     { 
-      id: "dennis-ritchie", 
+      id: 1, 
       name: "Dennis Ritchie", 
       totalSub: 8, 
       totalQuestion: 145, 
@@ -803,10 +391,9 @@ export default function TaskCategoriesPage() {
     }
   };
 
-  // const handleSubcategoryClick = (categoryId, subcategoryId) => {
-  //   console.log(`Navigating to subcategory ${subcategoryId} in category ${categoryId}`);
-  //   // Navigation would be implemented here in a real app
-  // };
+  const handleSubcategoryClick = (categoryId, subcategoryId) => {
+    navigate(`/admin/category/${categoryId}/tasks/`);
+  };
 
   const handleDelete = (e, id) => {
     e.stopPropagation();
@@ -892,13 +479,13 @@ export default function TaskCategoriesPage() {
           
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 sm:mb-6 gap-3">
             <h1 className="text-xl sm:text-2xl font-semibold text-gray-800">Task Categories</h1>
-            {/* <button 
+            <button 
               onClick={handleAddTask}
               className="bg-blue-600 text-white px-3 py-2 sm:px-4 rounded-md flex items-center space-x-2 hover:bg-blue-700 transition-colors text-sm sm:text-base w-full sm:w-auto justify-center"
             >
               <Plus size={18} />
               <span>Add Task</span>
-            </button> */}
+            </button>
           </div>
 
           
@@ -1016,6 +603,18 @@ export default function TaskCategoriesPage() {
                               <Unlock size={16} className="text-green-500" />
                             )}
                           </button>
+                          <button 
+                            onClick={(e) => handleEdit(e, category.id)}
+                            className="text-gray-600 hover:text-blue-600"
+                          >
+                            <Edit size={16} />
+                          </button>
+                          <button 
+                          onClick={(e) => handleDelete(e, category.id)}
+                          className="text-gray-600 hover:text-red-600 p-1"
+                        >
+                          <Trash2 size={16} />
+                        </button>
                         </div>
                       </div>
 
@@ -1047,7 +646,18 @@ export default function TaskCategoriesPage() {
                                 <Unlock size={16} className="text-green-500" />
                               )}
                             </button>
-                           
+                            <button 
+                              onClick={(e) => handleEdit(e, category.id)}
+                              className="text-gray-600 hover:text-blue-600 p-2"
+                            >
+                              <Edit size={16} />
+                            </button>
+                            <button 
+                              onClick={(e) => handleDelete(e, category.id)}
+                              className="text-gray-600 hover:text-red-600 p-2"
+                            >
+                              <Trash2 size={16} />
+                            </button>
                           </div>
                         </div>
                         
@@ -1069,7 +679,7 @@ export default function TaskCategoriesPage() {
                     {category.subcategories.map((subcategory) => (
                       <div 
                         key={subcategory.id}
-                        onClick={() => handleSubcategoryClick(category.id)}
+                        onClick={() => handleSubcategoryClick(category.id, subcategory.id)}
                         className="p-3 ml-4 sm:ml-8 border-b border-gray-200 last:border-b-0 cursor-pointer hover:bg-gray-100 transition-colors"
                       >
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
@@ -1087,7 +697,7 @@ export default function TaskCategoriesPage() {
       </div>
 
       {/* Add Task Modal - Responsive */}
-      {/* {showAddTaskModal && (
+      {showAddTaskModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg p-4 sm:p-6 w-full max-w-md mx-4">
             <h2 className="text-lg sm:text-xl font-semibold mb-4">Add New Task Category</h2>
@@ -1135,12 +745,18 @@ export default function TaskCategoriesPage() {
                 >
                   Cancel
                 </button>
-                
+                <button
+                  type="button"
+                  onClick={handleAddTaskSubmit}
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm sm:text-base order-1 sm:order-2"
+                >
+                  Add
+                </button>
               </div>
             </div>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 }
