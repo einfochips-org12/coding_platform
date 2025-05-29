@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from 'react';
 import { Search, Plus,SquarePlus,FileSpreadsheet, Edit, Trash2, Copy, MoreHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
-
+import ExerciseModal from '../../../components/Admin/TaskPage/AddExercise';
 // Redux-like state management using useReducer
 const initialState = {
   exercises: [
@@ -10,7 +10,8 @@ const initialState = {
       category: 'DR-Module 1',
       difficulty: 'Medium',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: [],
     },
     {
       id: 2,
@@ -18,7 +19,8 @@ const initialState = {
       category: 'DR-Module 1',
       difficulty: 'Hard',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 3,
@@ -26,7 +28,8 @@ const initialState = {
       category: 'DR-Module 1',
       difficulty: 'Medium',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 4,
@@ -34,7 +37,8 @@ const initialState = {
       category: 'DR-Module 2',
       difficulty: 'Medium',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 5,
@@ -42,7 +46,8 @@ const initialState = {
       category: 'DR-Module 4',
       difficulty: 'Easy',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 6,
@@ -50,7 +55,8 @@ const initialState = {
       category: 'DR-Module 5',
       difficulty: 'Easy',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 7,
@@ -58,7 +64,8 @@ const initialState = {
       category: 'DR-Module 6',
       difficulty: 'Hard',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     },
     {
       id: 8,
@@ -66,7 +73,8 @@ const initialState = {
       category: 'DR-Module 7',
       difficulty: 'Easy',
       modifiedDate: '24-03-2025',
-      textCode: ''
+      textCode: '',
+      testCases: []
     }
   ],
   searchTerm: '',
@@ -120,7 +128,7 @@ function exerciseReducer(state, action) {
   }
 }
 
-export default function ExerciseManagementPage() {
+const ExerciseManagementPage = ()=> {
   const [state, dispatch] = useReducer(exerciseReducer, initialState);
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingExercise, setEditingExercise] = useState(null);
@@ -158,128 +166,7 @@ export default function ExerciseManagementPage() {
     }
   };
 
-  const ExerciseModal = ({ exercise, isOpen, onClose, onSave }) => {
-    const [formData, setFormData] = useState({
-      name: exercise?.name || '',
-      category: exercise?.category || 'DR-Module 1',
-      difficulty: exercise?.difficulty || 'Medium',
-      textCode: exercise?.textCode || ''
-    });
-
-    if (!isOpen) return null;
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const exerciseData = {
-        ...formData,
-        modifiedDate: new Date().toLocaleDateString('en-GB'),
-        id: exercise?.id
-      };
-      
-      if (exercise) {
-        dispatch({ type: 'UPDATE_EXERCISE', payload: exerciseData });
-      } else {
-        dispatch({ type: 'ADD_EXERCISE', payload: exerciseData });
-      }
-      
-      onClose();
-    };
-
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-          <div className="p-6 border-b">
-            <h2 className="text-xl font-semibold">
-              {exercise ? 'Edit Exercise' : 'Add New Exercise'}
-            </h2>
-          </div>
-          
-          <div className="p-6 space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Exercise Name</label>
-              <textarea
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-md resize-none"
-                rows="3"
-                required
-              />
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Category</label>
-                <select
-                  value={formData.category}
-                  onChange={(e) => setFormData({...formData, category: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                >
-                  {Array.from({length: 8}, (_, i) => (
-                    <option key={i} value={`DR-Module ${i + 1}`}>DR-Module {i + 1}</option>
-                  ))}
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Difficulty</label>
-                <select
-                  value={formData.difficulty}
-                  onChange={(e) => setFormData({...formData, difficulty: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                >
-                  <option value="Easy">Easy</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Hard">Hard</option>
-                </select>
-              </div>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-2">Text Code</label>
-              <textarea
-                value={formData.textCode}
-                onChange={(e) => setFormData({...formData, textCode: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-md resize-none"
-                rows="4"
-                placeholder="Enter code or additional text here..."
-              />
-            </div>
-            
-            <div className="flex justify-end space-x-3 pt-4">
-              <button
-                type="button"
-                onClick={onClose}
-                className="px-4 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  const exerciseData = {
-                    ...formData,
-                    modifiedDate: new Date().toLocaleDateString('en-GB'),
-                    id: exercise?.id
-                  };
-                  
-                  if (exercise) {
-                    dispatch({ type: 'UPDATE_EXERCISE', payload: exerciseData });
-                  } else {
-                    dispatch({ type: 'ADD_EXERCISE', payload: exerciseData });
-                  }
-                  
-                  onClose();
-                }}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-              >
-                {exercise ? 'Update' : 'Add'} Exercise
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -363,7 +250,7 @@ export default function ExerciseManagementPage() {
                   <tr key={exercise.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4">
                       <div className="text-sm text-gray-900 max-w-md">
-                        <div className="font-medium">Exercise {exercise.id}</div>
+                        {/* <div className="font-medium">Exercise {exercise.id}</div> */}
                         <div className="mt-1 text-gray-600 line-clamp-2">
                           {exercise.name}
                         </div>
@@ -499,13 +386,19 @@ export default function ExerciseManagementPage() {
         exercise={null}
         isOpen={showAddModal}
         onClose={() => setShowAddModal(false)}
+        dispatch={dispatch}
+        initialState={initialState}
       />
       
       <ExerciseModal
         exercise={editingExercise}
         isOpen={!!editingExercise}
         onClose={() => setEditingExercise(null)}
+        dispatch={dispatch}
+        initialState={initialState}
       />
     </div>
   );
 }
+
+export default ExerciseManagementPage;

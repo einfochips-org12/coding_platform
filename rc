@@ -1,0 +1,1376 @@
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/index.css', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex bb83d91..358ddde 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -24,8 +24,11 @@[m
+         "react": "^19.1.0",[m
+         "react-dom": "^19.1.0",[m
+         "react-redux": "^9.2.0",[m
+[32m+[m[32m        "react-resizable": "^3.0.5",[m
+         "react-router-dom": "^7.6.0",[m
+         "react-scripts": "5.0.1",[m
+[32m+[m[32m        "react-split": "^2.0.14",[m
+[32m+[m[32m        "react-split-pane": "^0.1.92",[m
+         "recharts": "^2.15.3",[m
+         "web-vitals": "^2.1.4"[m
+       },[m
+[36m@@ -11964,13 +11967,6 @@[m
+         "mkdirp": "bin/cmd.js"[m
+       }[m
+     },[m
+[31m-    "node_modules/monaco-editor": {[m
+[31m-      "version": "0.52.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.52.2.tgz",[m
+[31m-      "integrity": "sha512-GEQWEZmfkOGLdd3XK8ryrfWz3AIP8YymVXiPHEdewrUq7mh0qrKrfHLNCXcbB6sTnMLnOZ3ztSiKcciFUkIJwQ==",[m
+[31m-      "license": "MIT",[m
+[31m-      "peer": true[m
+[31m-    },[m
+     "node_modules/motion-dom": {[m
+       "version": "12.11.0",[m
+       "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-12.11.0.tgz",[m
+[36m@@ -14413,6 +14409,29 @@[m
+         "react": "^19.1.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-draggable": {[m
+[32m+[m[32m      "version": "4.4.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-draggable/-/react-draggable-4.4.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "clsx": "^1.1.1",[m
+[32m+[m[32m        "prop-types": "^15.8.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">= 16.3.0",[m
+[32m+[m[32m        "react-dom": ">= 16.3.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-draggable/node_modules/clsx": {[m
+[32m+[m[32m      "version": "1.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=6"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-error-overlay": {[m
+       "version": "6.1.0",[m
+       "resolved": "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.1.0.tgz",[m
+[36m@@ -14425,6 +14444,12 @@[m
+       "integrity": "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==",[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/react-lifecycles-compat": {[m
+[32m+[m[32m      "version": "3.0.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/react-redux": {[m
+       "version": "9.2.0",[m
+       "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-9.2.0.tgz",[m
+[36m@@ -14457,6 +14482,19 @@[m
+         "node": ">=0.10.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-resizable": {[m
+[32m+[m[32m      "version": "3.0.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-resizable/-/react-resizable-3.0.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-vKpeHhI5OZvYn82kXOs1bC8aOXktGU5AmKAgaZS4F5JPburCtbmDPqE7Pzp+1kN4+Wb81LlF33VpGwWwtXem+w==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "prop-types": "15.x",[m
+[32m+[m[32m        "react-draggable": "^4.0.3"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">= 16.3"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-router": {[m
+       "version": "7.6.0",[m
+       "resolved": "https://registry.npmjs.org/react-router/-/react-router-7.6.0.tgz",[m
+[36m@@ -14592,6 +14630,43 @@[m
+         "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-split": {[m
+[32m+[m[32m      "version": "2.0.14",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-split/-/react-split-2.0.14.tgz",[m
+[32m+[m[32m      "integrity": "sha512-bKWydgMgaKTg/2JGQnaJPg51T6dmumTWZppFgEbbY0Fbme0F5TuatAScCLaqommbGQQf/ZT1zaejuPDriscISA==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "prop-types": "^15.5.7",[m
+[32m+[m[32m        "split.js": "^1.6.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-split-pane": {[m
+[32m+[m[32m      "version": "0.1.92",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-split-pane/-/react-split-pane-0.1.92.tgz",[m
+[32m+[m[32m      "integrity": "sha512-GfXP1xSzLMcLJI5BM36Vh7GgZBpy+U/X0no+VM3fxayv+p1Jly5HpMofZJraeaMl73b3hvlr+N9zJKvLB/uz9w==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "prop-types": "^15.7.2",[m
+[32m+[m[32m        "react-lifecycles-compat": "^3.0.4",[m
+[32m+[m[32m        "react-style-proptype": "^3.2.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": "^16.0.0-0",[m
+[32m+[m[32m        "react-dom": "^16.0.0-0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-style-proptype": {[m
+[32m+[m[32m      "version": "3.2.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-style-proptype/-/react-style-proptype-3.2.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "prop-types": "^15.5.4"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-transition-group": {[m
+       "version": "4.4.5",[m
+       "resolved": "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz",[m
+[36m@@ -15796,6 +15871,12 @@[m
+         "wbuf": "^1.7.3"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/split.js": {[m
+[32m+[m[32m      "version": "1.6.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/split.js/-/split.js-1.6.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-mPTnGCiS/RiuTNsVhCm9De9cCAUsrNFFviRbADdKiiV+Kk8HKp/0fWu7Kr8pi3/yBmsqLFHuXGT9UUZ+CNLwFw==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/sprintf-js": {[m
+       "version": "1.0.3",[m
+       "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",[m
+[36m@@ -17031,20 +17112,6 @@[m
+         "is-typedarray": "^1.0.0"[m
+       }[m
+     },[m
+[31m-    "node_modules/typescript": {[m
+[31m-      "version": "4.9.5",[m
+[31m-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz",[m
+[31m-      "integrity": "sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==",[m
+[31m-      "license": "Apache-2.0",[m
+[31m-      "peer": true,[m
+[31m-      "bin": {[m
+[31m-        "tsc": "bin/tsc",[m
+[31m-        "tsserver": "bin/tsserver"[m
+[31m-      },[m
+[31m-      "engines": {[m
+[31m-        "node": ">=4.2.0"[m
+[31m-      }[m
+[31m-    },[m
+     "node_modules/unbox-primitive": {[m
+       "version": "1.1.0",[m
+       "resolved": "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.1.0.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 6e68b98..db8034e 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -19,8 +19,11 @@[m
+     "react": "^19.1.0",[m
+     "react-dom": "^19.1.0",[m
+     "react-redux": "^9.2.0",[m
+[32m+[m[32m    "react-resizable": "^3.0.5",[m
+     "react-router-dom": "^7.6.0",[m
+     "react-scripts": "5.0.1",[m
+[32m+[m[32m    "react-split": "^2.0.14",[m
+[32m+[m[32m    "react-split-pane": "^0.1.92",[m
+     "recharts": "^2.15.3",[m
+     "web-vitals": "^2.1.4"[m
+   },[m
+[1mdiff --git a/src/index.css b/src/index.css[m
+[1mindex a90f074..0444bff 100644[m
+[1m--- a/src/index.css[m
+[1m+++ b/src/index.css[m
+[36m@@ -2,3 +2,16 @@[m
+ @tailwind components;[m
+ @tailwind utilities;[m
+ [m
+[32m+[m[32m.gutter {[m
+[32m+[m[32m  background-color: #ccc;[m
+[32m+[m[32m  background-repeat: no-repeat;[m
+[32m+[m[32m  background-position: 50%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.gutter.gutter-horizontal {[m
+[32m+[m[32m  cursor: col-resize;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.gutter.gutter-vertical {[m
+[32m+[m[32m  cursor: row-resize;[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/pages/Editor/editor.jsx b/src/pages/Editor/editor.jsx[m
+[1mindex a0923ce..06fdafe 100644[m
+[1m--- a/src/pages/Editor/editor.jsx[m
+[1m+++ b/src/pages/Editor/editor.jsx[m
+[36m@@ -1,462 +1,10 @@[m
+[31m-// import React, { useState, useEffect } from "react";[m
+[31m-// import Editor from "@monaco-editor/react";[m
+[31m-// import { loader } from "@monaco-editor/react";[m
+[31m-[m
+[31m-// // Function to return default files based on the language[m
+[31m-// const getDefaultFiles = (lang) => {[m
+[31m-//   if (lang === "c") {[m
+[31m-//     return {[m
+[31m-//       "main.c": `#include "custom.h"[m
+[31m-[m
+[31m-// int main() {[m
+[31m-//     sayHello();[m
+[31m-//     return 0;[m
+[31m-// }`,[m
+[31m-//       "custom.h": `#ifndef CUSTOM_H[m
+[31m-// #define CUSTOM_H[m
+[31m-[m
+[31m-// void sayHello();[m
+[31m-[m
+[31m-// #endif`,[m
+[31m-//       "functions.c": `#include <stdio.h>[m
+[31m-// #include "custom.h"[m
+[31m-[m
+[31m-// void sayHello() {[m
+[31m-//     printf("Hello from function file!\\n");[m
+[31m-// }`[m
+[31m-//     };[m
+[31m-//   }[m
+[31m-//   if (lang === "cpp") {[m
+[31m-//     return {[m
+[31m-//       "main.cpp": `#include <iostream>[m
+[31m-[m
+[31m-// int main() {[m
+[31m-//     std::cout << "Hello, C++ World!" << std::endl;[m
+[31m-//     return 0;[m
+[31m-// }`[m
+[31m-//     };[m
+[31m-//   }[m
+[31m-//   if (lang === "javascript") {[m
+[31m-//     return {[m
+[31m-//       "main.js": `console.log("Hello, JavaScript World!");`[m
+[31m-//     };[m
+[31m-//   }[m
+[31m-//   return {};[m
+[31m-// };[m
+[31m-[m
+[31m-// const getExtension = (lang) => {[m
+[31m-//   switch (lang) {[m
+[31m-//     case "c":[m
+[31m-//       return ".c";[m
+[31m-//     case "cpp":[m
+[31m-//       return ".cpp";[m
+[31m-//     case "javascript":[m
+[31m-//       return ".js";[m
+[31m-//     default:[m
+[31m-//       return ".txt";[m
+[31m-//   }[m
+[31m-// };[m
+[31m-[m
+[31m-// function CodeEditor() {[m
+[31m-//   const [language, setLanguage] = useState("c");[m
+[31m-//   const [files, setFiles] = useState(getDefaultFiles("c"));[m
+[31m-//   const [activeFile, setActiveFile] = useState("main.c");[m
+[31m-//   const [isLoading, setIsLoading] = useState(false);[m
+[31m-//   const [statusMessage, setStatusMessage] = useState("");[m
+[31m-//   const [theme, setTheme] = useState("vs-dark"); // Default theme[m
+[31m-//   const [output, setOutput] = useState({[m
+[31m-//     compilationResult: "",[m
+[31m-//     executionOutput: "",[m
+[31m-//     errorMessage: ""[m
+[31m-//   });[m
+[31m-[m
+[31m-//   // Configure Monaco editor themes[m
+[31m-//   useEffect(() => {[m
+[31m-//     // Define and register the "one-dark" theme[m
+[31m-//     loader.init().then(monaco => {[m
+[31m-//       monaco.editor.defineTheme('one-dark', {[m
+[31m-//         base: 'vs-dark',[m
+[31m-//         inherit: true,[m
+[31m-//         rules: [[m
+[31m-//           { token: 'comment', foreground: '5C6370', fontStyle: 'italic' },[m
+[31m-//           { token: 'keyword', foreground: 'C678DD' },[m
+[31m-//           { token: 'function', foreground: '61AFEF' },[m
+[31m-//           { token: 'string', foreground: '98C379' },[m
+[31m-//           { token: 'number', foreground: 'D19A66' },[m
+[31m-//           { token: 'type', foreground: 'E5C07B' },[m
+[31m-//           { token: 'operator', foreground: '56B6C2' }[m
+[31m-//         ],[m
+[31m-//         colors: {[m
+[31m-//           'editor.background': '#282C34',[m
+[31m-//           'editor.foreground': '#ABB2BF',[m
+[31m-//           'editor.lineHighlightBackground': '#2C313C',[m
+[31m-//           'editorCursor.foreground': '#528BFF',[m
+[31m-//           'editorWhitespace.foreground': '#3B4048',[m
+[31m-//           'editorLineNumber.foreground': '#495162',[m
+[31m-//           'editor.selectionBackground': '#3E4451',[m
+[31m-//           'editor.findMatchBackground': '#42557B',[m
+[31m-//           'editor.findMatchHighlightBackground': '#314365',[m
+[31m-//         }[m
+[31m-//       });[m
+[31m-[m
+[31m-//       // Define and register the "one-light" theme[m
+[31m-//       monaco.editor.defineTheme('one-light', {[m
+[31m-//         base: 'vs',[m
+[31m-//         inherit: true,[m
+[31m-//         rules: [[m
+[31m-//           { token: 'comment', foreground: '9E9E9E', fontStyle: 'italic' },[m
+[31m-//           { token: 'keyword', foreground: 'A626A4' },[m
+[31m-//           { token: 'function', foreground: '4078F2' },[m
+[31m-//           { token: 'string', foreground: '50A14F' },[m
+[31m-//           { token: 'number', foreground: 'C76B29' },[m
+[31m-//           { token: 'type', foreground: 'C18401' },[m
+[31m-//           { token: 'operator', foreground: '0184BC' }[m
+[31m-//         ],[m
+[31m-//         colors: {[m
+[31m-//           'editor.background': '#FAFAFA',[m
+[31m-//           'editor.foreground': '#383A42',[m
+[31m-//           'editor.lineHighlightBackground': '#F0F0F0',[m
+[31m-//           'editorCursor.foreground': '#526FFF',[m
+[31m-//           'editorWhitespace.foreground': '#E5E5E5',[m
+[31m-//           'editorLineNumber.foreground': '#9D9D9F',[m
+[31m-//           'editor.selectionBackground': '#D7DAE0',[m
+[31m-//           'editor.findMatchBackground': '#C5E1FF',[m
+[31m-//           'editor.findMatchHighlightBackground': '#D8EBFF',[m
+[31m-//         }[m
+[31m-//       });[m
+[31m-//     });[m
+[31m-//   }, []);[m
+[31m-[m
+[31m-//   const handleLanguageChange = (e) => {[m
+[31m-//     const lang = e.target.value;[m
+[31m-//     const defaultFiles = getDefaultFiles(lang);[m
+[31m-//     setLanguage(lang);[m
+[31m-//     setFiles(defaultFiles);[m
+[31m-//     setActiveFile(Object.keys(defaultFiles)[0]);[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const handleCodeChange = (value) => {[m
+[31m-//     setFiles((prev) => ({[m
+[31m-//       ...prev,[m
+[31m-//       [activeFile]: value[m
+[31m-//     }));[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const handleAddFile = () => {[m
+[31m-//     const ext = getExtension(language);[m
+[31m-//     const isCH = language === "c";[m
+[31m-[m
+[31m-//     let newFileName = prompt([m
+[31m-//       `Enter new file name (${isCH ? "with .c or .h extension" : `with ${ext}`}):`,[m
+[31m-//       isCH ? `newfile.c` : `newfile${ext}`[m
+[31m-//     );[m
+[31m-[m
+[31m-//     if (!newFileName) return;[m
+[31m-[m
+[31m-//     const validExts = isCH ? [".c", ".h"] : [ext];[m
+[31m-//     const isValidExt = validExts.some((v) => newFileName.endsWith(v));[m
+[31m-[m
+[31m-//     if (!isValidExt) {[m
+[31m-//       alert(`File must end with ${validExts.join(" or ")}`);[m
+[31m-//       return;[m
+[31m-//     }[m
+[31m-[m
+[31m-//     if (files[newFileName]) {[m
+[31m-//       alert("File already exists!");[m
+[31m-//       return;[m
+[31m-//     }[m
+[31m-[m
+[31m-//     let defaultContent = "";[m
+[31m-//     if (newFileName.endsWith(".h")) {[m
+[31m-//       const headerGuard = newFileName.replace(/[^a-zA-Z0-9]/g, "_").toUpperCase();[m
+[31m-//       defaultContent = `#ifndef ${headerGuard}\n#define ${headerGuard}\n\n\n#endif`;[m
+[31m-//     } else if (newFileName.endsWith(".c") || newFileName.endsWith(".cpp")) {[m
+[31m-//       defaultContent = `// ${newFileName}\n\nint main() {\n    return 0;\n}`;[m
+[31m-//     } else if (newFileName.endsWith(".js")) {[m
+[31m-//       defaultContent = `console.log("New JS file");`;[m
+[31m-//     }[m
+[31m-[m
+[31m-//     const isMainInNewFile = defaultContent.includes("int main()");[m
+[31m-//     let updatedFiles = { ...files };[m
+[31m-[m
+[31m-//     if (isMainInNewFile) {[m
+[31m-//       for (const fileName in updatedFiles) {[m
+[31m-//         if (updatedFiles[fileName].includes("int main()")) {[m
+[31m-//           delete updatedFiles[fileName];[m
+[31m-//           break;[m
+[31m-//         }[m
+[31m-//       }[m
+[31m-//     }[m
+[31m-[m
+[31m-//     updatedFiles[newFileName] = defaultContent;[m
+[31m-//     setFiles(updatedFiles);[m
+[31m-//     setActiveFile(newFileName);[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const handleDeleteFile = () => {[m
+[31m-//     if (Object.keys(files).length === 1) {[m
+[31m-//       alert("Cannot delete the last file.");[m
+[31m-//       return;[m
+[31m-//     }[m
+[31m-//     if (!window.confirm(`Delete file "${activeFile}"?`)) return;[m
+[31m-[m
+[31m-//     const newFiles = { ...files };[m
+[31m-//     delete newFiles[activeFile];[m
+[31m-//     const nextFile = Object.keys(newFiles)[0];[m
+[31m-//     setFiles(newFiles);[m
+[31m-//     setActiveFile(nextFile);[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const checkMainConflict = () => {[m
+[31m-//     let mainCount = 0;[m
+[31m-//     Object.keys(files).forEach((fileName) => {[m
+[31m-//       const content = files[fileName];[m
+[31m-//       if (content.includes("int main()")) {[m
+[31m-//         mainCount++;[m
+[31m-//       }[m
+[31m-//     });[m
+[31m-[m
+[31m-//     if (mainCount > 1) {[m
+[31m-//       alert("Multiple 'main' functions found. Please ensure only one main exists.");[m
+[31m-//       return false;[m
+[31m-//     }[m
+[31m-//     return true;[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const handleSubmit = async () => {[m
+[31m-//     if (!checkMainConflict()) return; // Check for main conflict before proceeding[m
+[31m-    [m
+[31m-//     const formData = new FormData();[m
+[31m-    [m
+[31m-//     // Add required parameters to the formData[m
+[31m-//     formData.append("UserId", 1); // Replace with actual UserId[m
+[31m-//     formData.append("TaskId", 1); // Replace with actual TaskId[m
+[31m-//     formData.append("Language", language); // Add language like "c", "cpp", etc.[m
+[31m-    [m
+[31m-//     // Add the main code file (CodeFile)[m
+[31m-//     if (files[activeFile]) {[m
+[31m-//       const blob = new Blob([files[activeFile]], { type: "text/plain" });[m
+[31m-//       formData.append("CodeFile", blob, activeFile);[m
+[31m-//     }[m
+[31m-    [m
+[31m-//     // Add the actual code (Code) as a fallback, if needed[m
+[31m-//     formData.append("Code", files[activeFile] || "");[m
+[31m-    [m
+[31m-//     // Add any additional files (AdditionalFiles)[m
+[31m-//     Object.keys(files).forEach((fileName) => {[m
+[31m-//       if (fileName !== activeFile) {[m
+[31m-//         const blob = new Blob([files[fileName]], { type: "text/plain" });[m
+[31m-//         formData.append("AdditionalFiles", blob, fileName);[m
+[31m-//       }[m
+[31m-//     });[m
+[31m-    [m
+[31m-//     // Add the Execute flag (assuming it's a boolean)[m
+[31m-//     formData.append("Execute", "true"); // or "false" depending on the requirement[m
+[31m-[m
+[31m-//     // Set loading state and clear previous output[m
+[31m-//     setIsLoading(true);[m
+[31m-//     setStatusMessage("⏳ Compiling and running...");[m
+[31m-//     setOutput({[m
+[31m-//       compilationResult: "",[m
+[31m-//       executionOutput: "",[m
+[31m-//       errorMessage: ""[m
+[31m-//     });[m
+[31m-[m
+[31m-//     try {[m
+[31m-//       const response = await fetch("http://localhost:5195/api/CodeExecution/run-code", {[m
+[31m-//         method: "POST",[m
+[31m-//         body: formData[m
+[31m-//       });[m
+[31m-[m
+[31m-//       const data = await response.json();[m
+[31m-[m
+[31m-//       if (response.ok) {[m
+[31m-//         // Extract the results from the response[m
+[31m-//         const { status, results, actualOutput, expectedOutput, error } = data;[m
+[31m-[m
+[31m-//         if (status === "Failed") {[m
+[31m-//           setOutput({[m
+[31m-//             compilationResult: "",[m
+[31m-//             executionOutput: `Test results:\nExpected: ${expectedOutput.join(", ")}\nActual: ${actualOutput.join(", ")}\nResults: ${results.join(", ")}`,[m
+[31m-//             errorMessage: error || "An error occurred during execution."[m
+[31m-//           });[m
+[31m-//           setStatusMessage("❌ Execution failed.");[m
+[31m-//         } else {[m
+[31m-//           setOutput({[m
+[31m-//             compilationResult: data.compilationResult || "Compilation successful.",[m
+[31m-//             executionOutput: actualOutput.join("\n"),[m
+[31m-//             errorMessage: ""[m
+[31m-//           });[m
+[31m-//           setStatusMessage("✅ Compiled and executed successfully.");[m
+[31m-//         }[m
+[31m-//       } else {[m
+[31m-//         setOutput({[m
+[31m-//           compilationResult: "",[m
+[31m-//           executionOutput: "",[m
+[31m-//           errorMessage: data.message || "An error occurred while executing the code."[m
+[31m-//         });[m
+[31m-//         setStatusMessage("❌ Execution failed.");[m
+[31m-//       }[m
+[31m-//     } catch (error) {[m
+[31m-//       setOutput({[m
+[31m-//         compilationResult: "",[m
+[31m-//         executionOutput: "",[m
+[31m-//         errorMessage: "Failed to connect to the server."[m
+[31m-//       });[m
+[31m-//       setStatusMessage("❌ Server connection error.");[m
+[31m-//     } finally {[m
+[31m-//       setIsLoading(false);[m
+[31m-//     }[m
+[31m-//   };[m
+[31m-[m
+[31m-//   // Toggle between themes: one-dark and one-light[m
+[31m-//   const toggleTheme = () => {[m
+[31m-//     setTheme(prevTheme => {[m
+[31m-//       if (prevTheme === "vs-dark") return "one-dark";[m
+[31m-//       if (prevTheme === "one-dark") return "one-light";[m
+[31m-//       return "one-dark";[m
+[31m-//     });[m
+[31m-//   };[m
+[31m-[m
+[31m-//   const handleFileUpload = (event) => {[m
+[31m-//     const uploadedFiles = event.target.files;[m
+[31m-//     if (!uploadedFiles) return;[m
+[31m-[m
+[31m-//     let newFiles = { ...files };[m
+[31m-//     let mainFileFound = Object.keys(newFiles).find((file) =>[m
+[31m-//       newFiles[file].includes("int main()")[m
+[31m-//     );[m
+[31m-[m
+[31m-//     Array.from(uploadedFiles).forEach((file) => {[m
+[31m-//       const reader = new FileReader();[m
+[31m-//       reader.onload = () => {[m
+[31m-//         const content = reader.result;[m
+[31m-//         const fileExtension = file.name.split(".").pop();[m
+[31m-[m
+[31m-//         const validExts = ["c", "cpp", "h", "js"];[m
+[31m-//         if (!validExts.includes(fileExtension)) {[m
+[31m-//           alert("Invalid file type. Only .c, .cpp, .h, or .js allowed.");[m
+[31m-//           return;[m
+[31m-//         }[m
+[31m-[m
+[31m-//         const hasMain = content.includes("int main()");[m
+[31m-//         if (hasMain && mainFileFound && mainFileFound !== file.name) {[m
+[31m-//           delete newFiles[mainFileFound];[m
+[31m-//           mainFileFound = file.name;[m
+[31m-//         }[m
+[31m-[m
+[31m-//         newFiles[file.name] = content;[m
+[31m-//         setFiles({ ...newFiles });[m
+[31m-//         setActiveFile(file.name);[m
+[31m-//       };[m
+[31m-//       reader.readAsText(file);[m
+[31m-//     });[m
+[31m-//   };[m
+[31m-[m
+[31m-//   return ([m
+[31m-//     <div className="flex flex-col h-full w-full p-4 bg-gray-100">[m
+[31m-//       <div className="flex items-center gap-2 mb-4">[m
+[31m-//         <select [m
+[31m-//           className="px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"[m
+[31m-//           onChange={handleLanguageChange} [m
+[31m-//           value={language}[m
+[31m-//         >[m
+[31m-//           <option value="c">C</option>[m
+[31m-//           <option value="cpp">C++</option>[m
+[31m-//           <option value="javascript">JavaScript</option>[m
+[31m-//         </select>[m
+[31m-[m
+[31m-//         <select [m
+[31m-//           className="px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"[m
+[31m-//           onChange={(e) => setActiveFile(e.target.value)} [m
+[31m-//           value={activeFile}[m
+[31m-//         >[m
+[31m-//           {Object.keys(files).map((fileName) => ([m
+[31m-//             <option key={fileName} value={fileName}>[m
+[31m-//               {fileName}[m
+[31m-//             </option>[m
+[31m-//           ))}[m
+[31m-//         </select>[m
+[31m-[m
+[31m-        [m
+[31m-        [m
+[31m-       [m
+[31m-//         <button [m
+[31m-//           className={`px-3 py-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${[m
+[31m-//             isLoading ? "bg-gray-500" : "bg-blue-600 hover:bg-blue-700"[m
+[31m-//           }`}[m
+[31m-//           onClick={handleSubmit} [m
+[31m-//           disabled={isLoading}[m
+[31m-//         >[m
+[31m-//           {isLoading ? "Running..." : "Run Code"}[m
+[31m-//         </button>[m
+[31m-        [m
+[31m-        [m
+[31m-        [m
+[31m-//         <button[m
+[31m-//           className={`px-3 py-2 text-white rounded-md focus:outline-none focus:ring-2 ${[m
+[31m-//             theme.includes("light") [m
+[31m-//               ? "bg-gray-700 hover:bg-gray-800 focus:ring-gray-500" [m
+[31m-//               : "bg-yellow-500 hover:bg-yellow-600 focus:ring-yellow-400"[m
+[31m-//           }`}[m
+[31m-//           onClick={toggleTheme}[m
+[31m-//         >[m
+[31m-//           {theme.includes("light") ? "Dark Theme" : "Light Theme"}[m
+[31m-//         </button>[m
+[31m-//       </div>[m
+[31m-[m
+[31m-//       <div className="flex-grow border border-gray-300 rounded-md overflow-hidden">[m
+[31m-//         <Editor[m
+[31m-//           height="100%"[m
+[31m-//           language={language === "cpp" ? "cpp" : language === "c" ? "c" : "javascript"}[m
+[31m-//           value={files[activeFile]}[m
+[31m-//           theme={theme}[m
+[31m-//           onChange={handleCodeChange}[m
+[31m-//           options={{[m
+[31m-//             minimap: { enabled: false },[m
+[31m-//             scrollBeyondLastLine: false,[m
+[31m-//             fontSize: 14,[m
+[31m-//             wordWrap: "on"[m
+[31m-//           }}[m
+[31m-//         />[m
+[31m-//       </div>[m
+[31m-[m
+[31m-//       {statusMessage && ([m
+[31m-//         <div className={`mt-3 font-bold ${[m
+[31m-//           isLoading ? "text-blue-600" : statusMessage.includes("✅") ? "text-green-600" : "text-red-600"[m
+[31m-//         }`}>[m
+[31m-//           {statusMessage}[m
+[31m-//         </div>[m
+[31m-//       )}[m
+[31m-[m
+[31m-//       <div className="mt-4 border border-gray-300 rounded-md p-4 bg-white">[m
+[31m-//         {output.errorMessage && ([m
+[31m-//           <div className="text-red-600 mb-3">[m
+[31m-//             <strong>Error:</strong> {output.errorMessage}[m
+[31m-//           </div>[m
+[31m-//         )}[m
+[31m-[m
+[31m-//         <h3 className="text-lg font-semibold mb-2">Compilation Result:</h3>[m
+[31m-//         <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-32">[m
+[31m-//           {output.compilationResult || "No result yet"}[m
+[31m-//         </pre>[m
+[31m-[m
+[31m-//         <h3 className="text-lg font-semibold mt-4 mb-2">Execution Output:</h3>[m
+[31m-//         <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-48">[m
+[31m-//           {output.executionOutput || "No output yet"}[m
+[31m-//         </pre>[m
+[31m-//       </div>[m
+[31m-//     </div>[m
+[31m-//   );[m
+[31m-// }[m
+[31m-[m
+[31m-// export default CodeEditor;[m
+[31m-[m
+ import React, { useState, useEffect } from "react";[m
+ import Editor from "@monaco-editor/react";[m
+ import { loader } from "@monaco-editor/react";[m
+[32m+[m[32mimport { ResizableBox } from "react-resizable";[m
+[32m+[m[32mimport Split from 'react-split';[m
+[32m+[m[32mimport ProblemDescription from "../../components/Admin/EditorComponent/problemDescription";[m
+ [m
+[31m-// Function to return default files based on the language[m
+ const getDefaultFiles = (lang) => {[m
+   if (lang === "c") {[m
+     return {[m
+[36m@@ -477,7 +25,7 @@[m [mvoid sayHello();[m
+ [m
+ void sayHello() {[m
+     printf("Hello from function file!\\n");[m
+[31m-}`[m
+[32m+[m[32m}`,[m
+     };[m
+   }[m
+   if (lang === "cpp") {[m
+[36m@@ -487,12 +35,12 @@[m [mvoid sayHello() {[m
+ int main() {[m
+     std::cout << "Hello, C++ World!" << std::endl;[m
+     return 0;[m
+[31m-}`[m
+[32m+[m[32m}`,[m
+     };[m
+   }[m
+   if (lang === "javascript") {[m
+     return {[m
+[31m-      "main.js": `console.log("Hello, JavaScript World!");`[m
+[32m+[m[32m      "main.js": `console.log("Hello, JavaScript World!");`,[m
+     };[m
+   }[m
+   return {};[m
+[36m@@ -517,66 +65,64 @@[m [mfunction CodeEditor() {[m
+   const [activeFile, setActiveFile] = useState("main.c");[m
+   const [isLoading, setIsLoading] = useState(false);[m
+   const [statusMessage, setStatusMessage] = useState("");[m
+[31m-  const [theme, setTheme] = useState("vs-dark"); // Default theme[m
+[32m+[m[32m  const [theme, setTheme] = useState("vs-dark");[m
+   const [output, setOutput] = useState({[m
+     compilationResult: "",[m
+     executionOutput: "",[m
+[31m-    errorMessage: ""[m
+[32m+[m[32m    errorMessage: "",[m
+   });[m
+ [m
+[31m-  // Configure Monaco editor themes[m
+   useEffect(() => {[m
+[31m-    // Define and register the "one-dark" theme[m
+[31m-    loader.init().then(monaco => {[m
+[31m-      monaco.editor.defineTheme('one-dark', {[m
+[31m-        base: 'vs-dark',[m
+[32m+[m[32m    loader.init().then((monaco) => {[m
+[32m+[m[32m      monaco.editor.defineTheme("one-dark", {[m
+[32m+[m[32m        base: "vs-dark",[m
+         inherit: true,[m
+         rules: [[m
+[31m-          { token: 'comment', foreground: '5C6370', fontStyle: 'italic' },[m
+[31m-          { token: 'keyword', foreground: 'C678DD' },[m
+[31m-          { token: 'function', foreground: '61AFEF' },[m
+[31m-          { token: 'string', foreground: '98C379' },[m
+[31m-          { token: 'number', foreground: 'D19A66' },[m
+[31m-          { token: 'type', foreground: 'E5C07B' },[m
+[31m-          { token: 'operator', foreground: '56B6C2' }[m
+[32m+[m[32m          { token: "comment", foreground: "5C6370", fontStyle: "italic" },[m
+[32m+[m[32m          { token: "keyword", foreground: "C678DD" },[m
+[32m+[m[32m          { token: "function", foreground: "61AFEF" },[m
+[32m+[m[32m          { token: "string", foreground: "98C379" },[m
+[32m+[m[32m          { token: "number", foreground: "D19A66" },[m
+[32m+[m[32m          { token: "type", foreground: "E5C07B" },[m
+[32m+[m[32m          { token: "operator", foreground: "56B6C2" },[m
+         ],[m
+         colors: {[m
+[31m-          'editor.background': '#282C34',[m
+[31m-          'editor.foreground': '#ABB2BF',[m
+[31m-          'editor.lineHighlightBackground': '#2C313C',[m
+[31m-          'editorCursor.foreground': '#528BFF',[m
+[31m-          'editorWhitespace.foreground': '#3B4048',[m
+[31m-          'editorLineNumber.foreground': '#495162',[m
+[31m-          'editor.selectionBackground': '#3E4451',[m
+[31m-          'editor.findMatchBackground': '#42557B',[m
+[31m-          'editor.findMatchHighlightBackground': '#314365',[m
+[31m-        }[m
+[32m+[m[32m          "editor.background": "#282C34",[m
+[32m+[m[32m          "editor.foreground": "#ABB2BF",[m
+[32m+[m[32m          "editor.lineHighlightBackground": "#2C313C",[m
+[32m+[m[32m          "editorCursor.foreground": "#528BFF",[m
+[32m+[m[32m          "editorWhitespace.foreground": "#3B4048",[m
+[32m+[m[32m          "editorLineNumber.foreground": "#495162",[m
+[32m+[m[32m          "editor.selectionBackground": "#3E4451",[m
+[32m+[m[32m          "editor.findMatchBackground": "#42557B",[m
+[32m+[m[32m          "editor.findMatchHighlightBackground": "#314365",[m
+[32m+[m[32m        },[m
+       });[m
+ [m
+       // Define and register the "one-light" theme[m
+[31m-      monaco.editor.defineTheme('one-light', {[m
+[31m-        base: 'vs',[m
+[32m+[m[32m      monaco.editor.defineTheme("one-light", {[m
+[32m+[m[32m        base: "vs",[m
+         inherit: true,[m
+         rules: [[m
+[31m-          { token: 'comment', foreground: '9E9E9E', fontStyle: 'italic' },[m
+[31m-          { token: 'keyword', foreground: 'A626A4' },[m
+[31m-          { token: 'function', foreground: '4078F2' },[m
+[31m-          { token: 'string', foreground: '50A14F' },[m
+[31m-          { token: 'number', foreground: 'C76B29' },[m
+[31m-          { token: 'type', foreground: 'C18401' },[m
+[31m-          { token: 'operator', foreground: '0184BC' }[m
+[32m+[m[32m          { token: "comment", foreground: "9E9E9E", fontStyle: "italic" },[m
+[32m+[m[32m          { token: "keyword", foreground: "A626A4" },[m
+[32m+[m[32m          { token: "function", foreground: "4078F2" },[m
+[32m+[m[32m          { token: "string", foreground: "50A14F" },[m
+[32m+[m[32m          { token: "number", foreground: "C76B29" },[m
+[32m+[m[32m          { token: "type", foreground: "C18401" },[m
+[32m+[m[32m          { token: "operator", foreground: "0184BC" },[m
+         ],[m
+         colors: {[m
+[31m-          'editor.background': '#FAFAFA',[m
+[31m-          'editor.foreground': '#383A42',[m
+[31m-          'editor.lineHighlightBackground': '#F0F0F0',[m
+[31m-          'editorCursor.foreground': '#526FFF',[m
+[31m-          'editorWhitespace.foreground': '#E5E5E5',[m
+[31m-          'editorLineNumber.foreground': '#9D9D9F',[m
+[31m-          'editor.selectionBackground': '#D7DAE0',[m
+[31m-          'editor.findMatchBackground': '#C5E1FF',[m
+[31m-          'editor.findMatchHighlightBackground': '#D8EBFF',[m
+[31m-        }[m
+[32m+[m[32m          "editor.background": "#FAFAFA",[m
+[32m+[m[32m          "editor.foreground": "#383A42",[m
+[32m+[m[32m          "editor.lineHighlightBackground": "#F0F0F0",[m
+[32m+[m[32m          "editorCursor.foreground": "#526FFF",[m
+[32m+[m[32m          "editorWhitespace.foreground": "#E5E5E5",[m
+[32m+[m[32m          "editorLineNumber.foreground": "#9D9D9F",[m
+[32m+[m[32m          "editor.selectionBackground": "#D7DAE0",[m
+[32m+[m[32m          "editor.findMatchBackground": "#C5E1FF",[m
+[32m+[m[32m          "editor.findMatchHighlightBackground": "#D8EBFF",[m
+[32m+[m[32m        },[m
+       });[m
+     });[m
+   }, []);[m
+[36m@@ -592,7 +138,7 @@[m [mfunction CodeEditor() {[m
+   const handleCodeChange = (value) => {[m
+     setFiles((prev) => ({[m
+       ...prev,[m
+[31m-      [activeFile]: value[m
+[32m+[m[32m      [activeFile]: value,[m
+     }));[m
+   };[m
+ [m
+[36m@@ -601,7 +147,9 @@[m [mfunction CodeEditor() {[m
+     const isCH = language === "c";[m
+ [m
+     let newFileName = prompt([m
+[31m-      `Enter new file name (${isCH ? "with .c or .h extension" : `with ${ext}`}):`,[m
+[32m+[m[32m      `Enter new file name (${[m
+[32m+[m[32m        isCH ? "with .c or .h extension" : `with ${ext}`[m
+[32m+[m[32m      }):`,[m
+       isCH ? `newfile.c` : `newfile${ext}`[m
+     );[m
+ [m
+[36m@@ -622,7 +170,9 @@[m [mfunction CodeEditor() {[m
+ [m
+     let defaultContent = "";[m
+     if (newFileName.endsWith(".h")) {[m
+[31m-      const headerGuard = newFileName.replace(/[^a-zA-Z0-9]/g, "_").toUpperCase();[m
+[32m+[m[32m      const headerGuard = newFileName[m
+[32m+[m[32m        .replace(/[^a-zA-Z0-9]/g, "_")[m
+[32m+[m[32m        .toUpperCase();[m
+       defaultContent = `#ifndef ${headerGuard}\n#define ${headerGuard}\n\n\n#endif`;[m
+     } else if (newFileName.endsWith(".c") || newFileName.endsWith(".cpp")) {[m
+       defaultContent = `// ${newFileName}\n\nint main() {\n    return 0;\n}`;[m
+[36m@@ -671,7 +221,9 @@[m [mfunction CodeEditor() {[m
+     });[m
+ [m
+     if (mainCount > 1) {[m
+[31m-      alert("Multiple 'main' functions found. Please ensure only one main exists.");[m
+[32m+[m[32m      alert([m
+[32m+[m[32m        "Multiple 'main' functions found. Please ensure only one main exists."[m
+[32m+[m[32m      );[m
+       return false;[m
+     }[m
+     return true;[m
+[36m@@ -679,23 +231,23 @@[m [mfunction CodeEditor() {[m
+ [m
+   const handleSubmit = async () => {[m
+     if (!checkMainConflict()) return; // Check for main conflict before proceeding[m
+[31m-    [m
+[32m+[m
+     const formData = new FormData();[m
+[31m-    [m
+[32m+[m
+     // Add required parameters to the formData[m
+     formData.append("UserId", 1); // Replace with actual UserId[m
+     formData.append("TaskId", 1); // Replace with actual TaskId[m
+     formData.append("Language", language); // Add language like "c", "cpp", etc.[m
+[31m-    [m
+[32m+[m
+     // Add the main code file (CodeFile)[m
+     if (files[activeFile]) {[m
+       const blob = new Blob([files[activeFile]], { type: "text/plain" });[m
+       formData.append("CodeFile", blob, activeFile);[m
+     }[m
+[31m-    [m
+[32m+[m
+     // Add the actual code (Code) as a fallback, if needed[m
+     formData.append("Code", files[activeFile] || "");[m
+[31m-    [m
+[32m+[m
+     // Add any additional files (AdditionalFiles)[m
+     Object.keys(files).forEach((fileName) => {[m
+       if (fileName !== activeFile) {[m
+[36m@@ -703,7 +255,7 @@[m [mfunction CodeEditor() {[m
+         formData.append("AdditionalFiles", blob, fileName);[m
+       }[m
+     });[m
+[31m-    [m
+[32m+[m
+     // Add the Execute flag (assuming it's a boolean)[m
+     formData.append("Execute", "true"); // or "false" depending on the requirement[m
+ [m
+[36m@@ -713,14 +265,17 @@[m [mfunction CodeEditor() {[m
+     setOutput({[m
+       compilationResult: "",[m
+       executionOutput: "",[m
+[31m-      errorMessage: ""[m
+[32m+[m[32m      errorMessage: "",[m
+     });[m
+ [m
+     try {[m
+[31m-      const response = await fetch("http://localhost:5195/api/CodeExecution/run-code", {[m
+[31m-        method: "POST",[m
+[31m-        body: formData[m
+[31m-      });[m
+[32m+[m[32m      const response = await fetch([m
+[32m+[m[32m        "http://localhost:5195/api/CodeExecution/run-code",[m
+[32m+[m[32m        {[m
+[32m+[m[32m          method: "POST",[m
+[32m+[m[32m          body: formData,[m
+[32m+[m[32m        }[m
+[32m+[m[32m      );[m
+ [m
+       const data = await response.json();[m
+ [m
+[36m@@ -731,15 +286,20 @@[m [mfunction CodeEditor() {[m
+         if (status === "Failed") {[m
+           setOutput({[m
+             compilationResult: "",[m
+[31m-            executionOutput: `Test results:\nExpected: ${expectedOutput.join(", ")}\nActual: ${actualOutput.join(", ")}\nResults: ${results.join(", ")}`,[m
+[31m-            errorMessage: error || "An error occurred during execution."[m
+[32m+[m[32m            executionOutput: `Test results:\nExpected: ${expectedOutput.join([m
+[32m+[m[32m              ", "[m
+[32m+[m[32m            )}\nActual: ${actualOutput.join(", ")}\nResults: ${results.join([m
+[32m+[m[32m              ", "[m
+[32m+[m[32m            )}`,[m
+[32m+[m[32m            errorMessage: error || "An error occurred during execution.",[m
+           });[m
+           setStatusMessage("❌ Execution failed.");[m
+         } else {[m
+           setOutput({[m
+[31m-            compilationResult: data.compilationResult || "Compilation successful.",[m
+[32m+[m[32m            compilationResult:[m
+[32m+[m[32m              data.compilationResult || "Compilation successful.",[m
+             executionOutput: actualOutput.join("\n"),[m
+[31m-            errorMessage: ""[m
+[32m+[m[32m            errorMessage: "",[m
+           });[m
+           setStatusMessage("✅ Compiled and executed successfully.");[m
+         }[m
+[36m@@ -747,7 +307,8 @@[m [mfunction CodeEditor() {[m
+         setOutput({[m
+           compilationResult: "",[m
+           executionOutput: "",[m
+[31m-          errorMessage: data.message || "An error occurred while executing the code."[m
+[32m+[m[32m          errorMessage:[m
+[32m+[m[32m            data.message || "An error occurred while executing the code.",[m
+         });[m
+         setStatusMessage("❌ Execution failed.");[m
+       }[m
+[36m@@ -755,7 +316,7 @@[m [mfunction CodeEditor() {[m
+       setOutput({[m
+         compilationResult: "",[m
+         executionOutput: "",[m
+[31m-        errorMessage: "Failed to connect to the server."[m
+[32m+[m[32m        errorMessage: "Failed to connect to the server.",[m
+       });[m
+       setStatusMessage("❌ Server connection error.");[m
+     } finally {[m
+[36m@@ -765,7 +326,7 @@[m [mfunction CodeEditor() {[m
+ [m
+   // Toggle between themes: one-dark and one-light[m
+   const toggleTheme = () => {[m
+[31m-    setTheme(prevTheme => {[m
+[32m+[m[32m    setTheme((prevTheme) => {[m
+       if (prevTheme === "vs-dark") return "one-dark";[m
+       if (prevTheme === "one-dark") return "one-light";[m
+       return "one-dark";[m
+[36m@@ -808,11 +369,18 @@[m [mfunction CodeEditor() {[m
+   };[m
+ [m
+   return ([m
+[31m-    <div className="flex flex-col h-full w-full p-4 bg-gray-100">[m
+[32m+[m[32m  <Split className="flex h-screen" sizes={[35, 65]} minSize={100} gutterSize={4}>[m
+[32m+[m[32m  {/* Pane 1: Description */}[m
+[32m+[m[32m  <ProblemDescription/>[m
+[32m+[m[32m  <Split direction="vertical" className="flex flex-col h-full" sizes={[65, 35]} minSize={100} gutterSize={4}[m
+[32m+[m[32m  >[m
+[32m+[m[32m    {/* Top of Pane 2: Code Editor & Controls */}[m
+[32m+[m[32m    <div className="flex flex-col h-full w-full p-4 bg-gray-100 overflow-hidden">[m
+[32m+[m[32m      {/* Controls */}[m
+       <div className="flex items-center gap-2 mb-4">[m
+[31m-        <select [m
+[32m+[m[32m        <select[m
+           className="px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"[m
+[31m-          onChange={handleLanguageChange} [m
+[32m+[m[32m          onChange={handleLanguageChange}[m
+           value={language}[m
+         >[m
+           <option value="c">C</option>[m
+[36m@@ -820,9 +388,9 @@[m [mfunction CodeEditor() {[m
+           <option value="javascript">JavaScript</option>[m
+         </select>[m
+ [m
+[31m-        <select [m
+[32m+[m[32m        <select[m
+           className="px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"[m
+[31m-          onChange={(e) => setActiveFile(e.target.value)} [m
+[32m+[m[32m          onChange={(e) => setActiveFile(e.target.value)}[m
+           value={activeFile}[m
+         >[m
+           {Object.keys(files).map((fileName) => ([m
+[36m@@ -832,25 +400,20 @@[m [mfunction CodeEditor() {[m
+           ))}[m
+         </select>[m
+ [m
+[31m-        [m
+[31m-        [m
+[31m-       [m
+[31m-        <button [m
+[32m+[m[32m        <button[m
+           className={`px-3 py-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${[m
+             isLoading ? "bg-gray-500" : "bg-blue-600 hover:bg-blue-700"[m
+           }`}[m
+[31m-          onClick={handleSubmit} [m
+[32m+[m[32m          onClick={handleSubmit}[m
+           disabled={isLoading}[m
+         >[m
+           {isLoading ? "Running..." : "Run Code"}[m
+         </button>[m
+[31m-        [m
+[31m-        [m
+[31m-        [m
+[32m+[m
+         <button[m
+           className={`px-3 py-2 text-white rounded-md focus:outline-none focus:ring-2 ${[m
+[31m-            theme.includes("light") [m
+[31m-              ? "bg-gray-700 hover:bg-gray-800 focus:ring-gray-500" [m
+[32m+[m[32m            theme.includes("light")[m
+[32m+[m[32m              ? "bg-gray-700 hover:bg-gray-800 focus:ring-gray-500"[m
+               : "bg-yellow-500 hover:bg-yellow-600 focus:ring-yellow-400"[m
+           }`}[m
+           onClick={toggleTheme}[m
+[36m@@ -859,6 +422,7 @@[m [mfunction CodeEditor() {[m
+         </button>[m
+       </div>[m
+ [m
+[32m+[m[32m      {/* Code Editor */}[m
+       <div className="flex-grow border border-gray-300 rounded-md overflow-hidden">[m
+         <Editor[m
+           height="100%"[m
+[36m@@ -870,38 +434,47 @@[m [mfunction CodeEditor() {[m
+             minimap: { enabled: false },[m
+             scrollBeyondLastLine: false,[m
+             fontSize: 14,[m
+[31m-            wordWrap: "on"[m
+[32m+[m[32m            wordWrap: "on",[m
+           }}[m
+         />[m
+       </div>[m
+ [m
+       {statusMessage && ([m
+[31m-        <div className={`mt-3 font-bold ${[m
+[31m-          isLoading ? "text-blue-600" : statusMessage.includes("✅") ? "text-green-600" : "text-red-600"[m
+[31m-        }`}>[m
+[32m+[m[32m        <div[m
+[32m+[m[32m          className={`mt-3 font-bold ${[m
+[32m+[m[32m            isLoading[m
+[32m+[m[32m              ? "text-blue-600"[m
+[32m+[m[32m              : statusMessage.includes("✅")[m
+[32m+[m[32m              ? "text-green-600"[m
+[32m+[m[32m              : "text-red-600"[m
+[32m+[m[32m          }`}[m
+[32m+[m[32m        >[m
+           {statusMessage}[m
+         </div>[m
+       )}[m
+[32m+[m[32m    </div>[m
+ [m
+[31m-      <div className="mt-4 border border-gray-300 rounded-md p-4 bg-white">[m
+[31m-        {output.errorMessage && ([m
+[31m-          <div className="text-red-600 mb-3">[m
+[31m-            <strong>Error:</strong> {output.errorMessage}[m
+[31m-          </div>[m
+[31m-        )}[m
+[31m-[m
+[31m-        <h3 className="text-lg font-semibold mb-2">Compilation Result:</h3>[m
+[31m-        <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-32">[m
+[31m-          {output.compilationResult || "No result yet"}[m
+[31m-        </pre>[m
+[31m-[m
+[31m-        <h3 className="text-lg font-semibold mt-4 mb-2">Execution Output:</h3>[m
+[31m-        <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-48">[m
+[31m-          {output.executionOutput || "No output yet"}[m
+[31m-        </pre>[m
+[31m-      </div>[m
+[32m+[m[32m    {/* Bottom of Pane 2: Output Section */}[m
+[32m+[m[32m    <div className="p-4 bg-white overflow-auto">[m
+[32m+[m[32m      {output.errorMessage && ([m
+[32m+[m[32m        <div className="text-red-600 mb-3">[m
+[32m+[m[32m          <strong>Error:</strong> {output.errorMessage}[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      )}[m
+[32m+[m
+[32m+[m[32m      <h3 className="text-lg font-semibold mb-2">Compilation Result:</h3>[m
+[32m+[m[32m      <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-32">[m
+[32m+[m[32m        {output.compilationResult || "No result yet"}[m
+[32m+[m[32m      </pre>[m
+[32m+[m
+[32m+[m[32m      <h3 className="text-lg font-semibold mt-4 mb-2">Execution Output:</h3>[m
+[32m+[m[32m      <pre className="bg-gray-100 p-3 rounded-md overflow-x-auto whitespace-pre-wrap max-h-48">[m
+[32m+[m[32m        {output.executionOutput || "No output yet"}[m
+[32m+[m[32m      </pre>[m
+     </div>[m
+[32m+[m[32m  </Split>[m
+[32m+[m[32m</Split>[m
+   );[m
+ }[m
+ [m
+[31m-export default CodeEditor;[m
+\ No newline at end of file[m
+[32m+[m[32mexport default CodeEditor;[m
+[1mdiff --git a/src/pages/admin/Category/taskpage.jsx b/src/pages/admin/Category/taskpage.jsx[m
+[1mindex 0a90c20..06eb2fd 100644[m
+[1m--- a/src/pages/admin/Category/taskpage.jsx[m
+[1m+++ b/src/pages/admin/Category/taskpage.jsx[m
+[36m@@ -1,6 +1,6 @@[m
+ import React, { useState, useReducer } from 'react';[m
+ import { Search, Plus,SquarePlus,FileSpreadsheet, Edit, Trash2, Copy, MoreHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';[m
+[31m-[m
+[32m+[m[32mimport ExerciseModal from '../../../components/Admin/TaskPage/AddExercise';[m
+ // Redux-like state management using useReducer[m
+ const initialState = {[m
+   exercises: [[m
+[36m@@ -10,7 +10,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 1',[m
+       difficulty: 'Medium',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [],[m
+     },[m
+     {[m
+       id: 2,[m
+[36m@@ -18,7 +19,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 1',[m
+       difficulty: 'Hard',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 3,[m
+[36m@@ -26,7 +28,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 1',[m
+       difficulty: 'Medium',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 4,[m
+[36m@@ -34,7 +37,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 2',[m
+       difficulty: 'Medium',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 5,[m
+[36m@@ -42,7 +46,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 4',[m
+       difficulty: 'Easy',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 6,[m
+[36m@@ -50,7 +55,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 5',[m
+       difficulty: 'Easy',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 7,[m
+[36m@@ -58,7 +64,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 6',[m
+       difficulty: 'Hard',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     },[m
+     {[m
+       id: 8,[m
+[36m@@ -66,7 +73,8 @@[m [mconst initialState = {[m
+       category: 'DR-Module 7',[m
+       difficulty: 'Easy',[m
+       modifiedDate: '24-03-2025',[m
+[31m-      textCode: ''[m
+[32m+[m[32m      textCode: '',[m
+[32m+[m[32m      testCases: [][m
+     }[m
+   ],[m
+   searchTerm: '',[m
+[36m@@ -120,7 +128,7 @@[m [mfunction exerciseReducer(state, action) {[m
+   }[m
+ }[m
+ [m
+[31m-export default function ExerciseManagementPage() {[m
+[32m+[m[32mconst ExerciseManagementPage = ()=> {[m
+   const [state, dispatch] = useReducer(exerciseReducer, initialState);[m
+   const [showAddModal, setShowAddModal] = useState(false);[m
+   const [editingExercise, setEditingExercise] = useState(null);[m
+[36m@@ -158,128 +166,7 @@[m [mexport default function ExerciseManagementPage() {[m
+     }[m
+   };[m
+ [m
+[31m-  const ExerciseModal = ({ exercise, isOpen, onClose, onSave }) => {[m
+[31m-    const [formData, setFormData] = useState({[m
+[31m-      name: exercise?.name || '',[m
+[31m-      category: exercise?.category || 'DR-Module 1',[m
+[31m-      difficulty: exercise?.difficulty || 'Medium',[m
+[31m-      textCode: exercise?.textCode || ''[m
+[31m-    });[m
+[31m-[m
+[31m-    if (!isOpen) return null;[m
+[31m-[m
+[31m-    const handleSubmit = (e) => {[m
+[31m-      e.preventDefault();[m
+[31m-      const exerciseData = {[m
+[31m-        ...formData,[m
+[31m-        modifiedDate: new Date().toLocaleDateString('en-GB'),[m
+[31m-        id: exercise?.id[m
+[31m-      };[m
+[31m-      [m
+[31m-      if (exercise) {[m
+[31m-        dispatch({ type: 'UPDATE_EXERCISE', payload: exerciseData });[m
+[31m-      } else {[m
+[31m-        dispatch({ type: 'ADD_EXERCISE', payload: exerciseData });[m
+[31m-      }[m
+[31m-      [m
+[31m-      onClose();[m
+[31m-    };[m
+[31m-[m
+[31m-    return ([m
+[31m-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">[m
+[31m-        <div className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">[m
+[31m-          <div className="p-6 border-b">[m
+[31m-            <h2 className="text-xl font-semibold">[m
+[31m-              {exercise ? 'Edit Exercise' : 'Add New Exercise'}[m
+[31m-            </h2>[m
+[31m-          </div>[m
+[31m-          [m
+[31m-          <div className="p-6 space-y-4">[m
+[31m-            <div>[m
+[31m-              <label className="block text-sm font-medium mb-2">Exercise Name</label>[m
+[31m-              <textarea[m
+[31m-                value={formData.name}[m
+[31m-                onChange={(e) => setFormData({...formData, name: e.target.value})}[m
+[31m-                className="w-full p-3 border border-gray-300 rounded-md resize-none"[m
+[31m-                rows="3"[m
+[31m-                required[m
+[31m-              />[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">[m
+[31m-              <div>[m
+[31m-                <label className="block text-sm font-medium mb-2">Category</label>[m
+[31m-                <select[m
+[31m-                  value={formData.category}[m
+[31m-                  onChange={(e) => setFormData({...formData, category: e.target.value})}[m
+[31m-                  className="w-full p-3 border border-gray-300 rounded-md"[m
+[31m-                >[m
+[31m-                  {Array.from({length: 8}, (_, i) => ([m
+[31m-                    <option key={i} value={`DR-Module ${i + 1}`}>DR-Module {i + 1}</option>[m
+[31m-                  ))}[m
+[31m-                </select>[m
+[31m-              </div>[m
+[31m-              [m
+[31m-              <div>[m
+[31m-                <label className="block text-sm font-medium mb-2">Difficulty</label>[m
+[31m-                <select[m
+[31m-                  value={formData.difficulty}[m
+[31m-                  onChange={(e) => setFormData({...formData, difficulty: e.target.value})}[m
+[31m-                  className="w-full p-3 border border-gray-300 rounded-md"[m
+[31m-                >[m
+[31m-                  <option value="Easy">Easy</option>[m
+[31m-                  <option value="Medium">Medium</option>[m
+[31m-                  <option value="Hard">Hard</option>[m
+[31m-                </select>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div>[m
+[31m-              <label className="block text-sm font-medium mb-2">Text Code</label>[m
+[31m-              <textarea[m
+[31m-                value={formData.textCode}[m
+[31m-                onChange={(e) => setFormData({...formData, textCode: e.target.value})}[m
+[31m-                className="w-full p-3 border border-gray-300 rounded-md resize-none"[m
+[31m-                rows="4"[m
+[31m-                placeholder="Enter code or additional text here..."[m
+[31m-              />[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div className="flex justify-end space-x-3 pt-4">[m
+[31m-              <button[m
+[31m-                type="button"[m
+[31m-                onClick={onClose}[m
+[31m-                className="px-4 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"[m
+[31m-              >[m
+[31m-                Cancel[m
+[31m-              </button>[m
+[31m-              <button[m
+[31m-                type="button"[m
+[31m-                onClick={() => {[m
+[31m-                  const exerciseData = {[m
+[31m-                    ...formData,[m
+[31m-                    modifiedDate: new Date().toLocaleDateString('en-GB'),[m
+[31m-                    id: exercise?.id[m
+[31m-                  };[m
+[31m-                  [m
+[31m-                  if (exercise) {[m
+[31m-                    dispatch({ type: 'UPDATE_EXERCISE', payload: exerciseData });[m
+[31m-                  } else {[m
+[31m-                    dispatch({ type: 'ADD_EXERCISE', payload: exerciseData });[m
+[31m-                  }[m
+[31m-                  [m
+[31m-                  onClose();[m
+[31m-                }}[m
+[31m-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"[m
+[31m-              >[m
+[31m-                {exercise ? 'Update' : 'Add'} Exercise[m
+[31m-              </button>[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </div>[m
+[31m-      </div>[m
+[31m-    );[m
+[31m-  };[m
+[32m+[m[41m  [m
+ [m
+   return ([m
+     <div className="min-h-screen bg-gray-50">[m
+[36m@@ -363,7 +250,7 @@[m [mexport default function ExerciseManagementPage() {[m
+                   <tr key={exercise.id} className="hover:bg-gray-50">[m
+                     <td className="px-6 py-4">[m
+                       <div className="text-sm text-gray-900 max-w-md">[m
+[31m-                        <div className="font-medium">Exercise {exercise.id}</div>[m
+[32m+[m[32m                        {/* <div className="font-medium">Exercise {exercise.id}</div> */}[m
+                         <div className="mt-1 text-gray-600 line-clamp-2">[m
+                           {exercise.name}[m
+                         </div>[m
+[36m@@ -499,13 +386,19 @@[m [mexport default function ExerciseManagementPage() {[m
+         exercise={null}[m
+         isOpen={showAddModal}[m
+         onClose={() => setShowAddModal(false)}[m
+[32m+[m[32m        dispatch={dispatch}[m
+[32m+[m[32m        initialState={initialState}[m
+       />[m
+       [m
+       <ExerciseModal[m
+         exercise={editingExercise}[m
+         isOpen={!!editingExercise}[m
+         onClose={() => setEditingExercise(null)}[m
+[32m+[m[32m        dispatch={dispatch}[m
+[32m+[m[32m        initialState={initialState}[m
+       />[m
+     </div>[m
+   );[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mexport default ExerciseManagementPage;[m
+\ No newline at end of file[m
